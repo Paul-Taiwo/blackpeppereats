@@ -9,6 +9,7 @@ import PropTypes from "prop-types";
 /**
  * Internal dependencies
  */
+import { popularFoods } from "utils/demoData";
 import Text from "./Text";
 import FoodCard from "./FoodCard";
 import SliderNextPrevButton from "./SliderNextPrevButton";
@@ -20,8 +21,8 @@ import SliderNextPrevButton from "./SliderNextPrevButton";
 const PopularSection = ({ showTitle }) => {
 	const settings = {
 		dots: false,
-		infinite: true,
-		speed: 500,
+		infinite: false,
+		speed: 300,
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		variableWidth: true,
@@ -41,8 +42,14 @@ const PopularSection = ({ showTitle }) => {
 
 					{/*  eslint-disable-next-line react/jsx-props-no-spreading */}
 					<Slider {...settings}>
-						{[...new Array(8).keys()].map(() => (
-							<FoodCard />
+						{[...popularFoods].map(({ name, description, image, price }) => (
+							<FoodCard
+								key={name}
+								foodName={name}
+								foodImg={image}
+								foodPrice={price}
+								foodDescription={description}
+							/>
 						))}
 					</Slider>
 				</div>

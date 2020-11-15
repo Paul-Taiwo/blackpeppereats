@@ -2,14 +2,16 @@
  * External dependencies
  */
 import React from "react";
+import PropTypes from "prop-types";
 
 /**
  * Internal dependencies
  */
-import foodImg from "assets/images/food1.jpeg";
+// import foodImg from "assets/images/food1.jpeg";
 import styled from "styled-components";
+import currencyFormatter from "utils/currencyFormatter";
 
-const FoodCard = () => {
+const FoodCard = ({ foodName, foodImg, foodDescription, foodPrice }) => {
 	return (
 		<Card>
 			<ImageContainer>
@@ -17,11 +19,8 @@ const FoodCard = () => {
 			</ImageContainer>
 
 			<div>
-				<FoodName>Jollof Rice & Beef</FoodName>
-				<FoodDescription>
-					Same as our regular Jollof rice but Meatier. Perfect for a large
-					party.
-				</FoodDescription>
+				<FoodName>{foodName}</FoodName>
+				<FoodDescription>{foodDescription}</FoodDescription>
 
 				<ButtonGroup
 					className="btn-group"
@@ -29,7 +28,7 @@ const FoodCard = () => {
 					aria-label="Price and Add to cart button"
 				>
 					<Button type="button" disabled className="btn">
-						₦ 4,670.00
+						{currencyFormatter(foodPrice)}
 					</Button>
 					<svg
 						width={2}
@@ -102,5 +101,12 @@ const Button = styled.button`
 		opacity: 1;
 	}
 `;
+
+FoodCard.propTypes = {
+	foodName: PropTypes.string.isRequired,
+	foodImg: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+	foodDescription: PropTypes.string.isRequired,
+	foodPrice: PropTypes.number.isRequired,
+};
 
 export default FoodCard;
