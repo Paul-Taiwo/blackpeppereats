@@ -10,6 +10,7 @@ import {
 	HeroBannerSection,
 	PopularSection,
 	CategoriesSection,
+	OffersSection,
 } from "Components";
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
 			<HeroBannerSection />
 			<PopularSection />
 			<CategoriesSection />
+			<OffersSection />
 		</div>
 	);
 };

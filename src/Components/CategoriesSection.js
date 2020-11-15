@@ -19,7 +19,7 @@ const CategoriesSection = () => {
 					<div className="d-flex align-items-center justify-content-between w-100 mb-4">
 						<Text.Title text="Our Categories" />
 
-						<SeeAllButton className="btn" title="See all" />
+						<SeeAllButton type="button" className="btn" title="See all" />
 					</div>
 				</div>
 

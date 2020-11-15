@@ -9,18 +9,18 @@ import Slider from "react-slick";
  * Internal dependencies
  */
 import Text from "./Text";
-import FoodCard from "./FoodCard";
-import SliderNextPrevButton from "./SliderNextPrevButton";
+import OffersCard from "./OffersCard";
+// import FoodCard from "./FoodCard";
 
-const PopularSection = () => {
+const OffersSection = () => {
 	const settings = {
 		dots: false,
 		infinite: true,
 		speed: 500,
-		slidesToShow: 4,
+		slidesToShow: 1,
 		slidesToScroll: 1,
 		variableWidth: true,
-		// centerMode: true,
+		centerMode: true,
 	};
 
 	return (
@@ -28,17 +28,16 @@ const PopularSection = () => {
 			<div className="container">
 				<div className="row">
 					<div className="d-flex align-items-center justify-content-between w-100 mb-4">
-						<Text.Title text="What’s Popular?" />
-						<SliderNextPrevButton />
+						<Text.Title text="Offers" />
 					</div>
-
-					{/*  eslint-disable-next-line react/jsx-props-no-spreading */}
-					<Slider {...settings}>
-						{[...new Array(8).keys()].map(() => (
-							<FoodCard />
-						))}
-					</Slider>
 				</div>
+
+				{/*  eslint-disable-next-line react/jsx-props-no-spreading */}
+				<Slider {...settings}>
+					{[...new Array(8).keys()].map(() => (
+						<OffersCard />
+					))}
+				</Slider>
 			</div>
 		</Section>
 	);
@@ -49,4 +48,4 @@ const Section = styled.section`
 	padding-bottom: 65px;
 `;
 
-export default PopularSection;
+export default OffersSection;
