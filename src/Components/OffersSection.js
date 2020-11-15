@@ -31,7 +31,9 @@ const OffersSection = () => {
 						<Text.Title text="Offers" />
 					</div>
 				</div>
+			</div>
 
+			<div className="container-fluid">
 				{/*  eslint-disable-next-line react/jsx-props-no-spreading */}
 				<Slider {...settings}>
 					{[...new Array(8).keys()].map(() => (

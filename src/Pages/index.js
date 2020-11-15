@@ -11,16 +11,20 @@ import {
 	PopularSection,
 	CategoriesSection,
 	OffersSection,
+	GetOurApp,
 } from "Components";
+import Layout from "Layout";
 
 const App = () => {
 	return (
-		<div>
+		<Layout>
 			<HeroBannerSection />
 			<PopularSection />
 			<CategoriesSection />
+			<GetOurApp />
 			<OffersSection />
-		</div>
+			<PopularSection showTitle={false} />
+		</Layout>
 	);
 };
 

@@ -24,7 +24,7 @@ const OffersCard = () => {
 };
 
 const Card = styled.div`
-	margin: 0 8px;
+	margin: 0 10px;
 	width: 900px;
 `;
 
@@ -38,7 +38,7 @@ const Overlay = styled.div`
 `;
 
 const ImageContainer = styled.div`
-	height: 324px;
+	height: 336px;
 	border-radius: 30px;
 	overflow: hidden;
 	position: relative;
