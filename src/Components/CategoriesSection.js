@@ -27,7 +27,12 @@ const CategoriesSection = () => {
 				<div className="row">
 					{[...categories].map(({ name, image }) => (
 						<div className="col-12 col-lg-3 px-0">
-							<FoodCategoryCard categoryName={name} categoryImage={image} />
+							s
+							<FoodCategoryCard
+								key={name}
+								categoryName={name}
+								categoryImage={image}
+							/>
 						</div>
 					))}
 				</div>

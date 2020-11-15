@@ -8,9 +8,9 @@ import Slider from "react-slick";
 /**
  * Internal dependencies
  */
+import { offers } from "utils/demoData";
 import Text from "./Text";
 import OffersCard from "./OffersCard";
-// import FoodCard from "./FoodCard";
 
 const OffersSection = () => {
 	const settings = {
@@ -33,13 +33,15 @@ const OffersSection = () => {
 				</div>
 			</div>
 
-			<div className="container-fluid">
-				{/*  eslint-disable-next-line react/jsx-props-no-spreading */}
-				<Slider {...settings}>
-					{[...new Array(8).keys()].map(() => (
-						<OffersCard />
-					))}
-				</Slider>
+			<div className="row">
+				<div className="container-fluid">
+					{/*  eslint-disable-next-line react/jsx-props-no-spreading */}
+					<Slider {...settings}>
+						{[...offers].map(({ name, image }) => (
+							<OffersCard offerName={name} offerImage={image} />
+						))}
+					</Slider>
+				</div>
 			</div>
 		</Section>
 	);

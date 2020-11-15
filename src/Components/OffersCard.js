@@ -2,22 +2,25 @@
  * External dependencies
  */
 import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
 /**
  * Internal dependencies
  */
-import foodImg from "assets/images/food1.jpeg";
-import styled from "styled-components";
 
-const OffersCard = () => {
+/**
+ *
+ * @param {string} offerName
+ * @param {string | number} offerImage
+ */
+const OffersCard = ({ offerName, offerImage }) => {
 	return (
 		<Card>
 			<ImageContainer>
 				<Overlay />
-				<Image className="img-fluid w-100 h-100" src={foodImg} alt="food" />
-				<Text className="mb-0">
-					Get 50% off a scheduled order from Tuesday!
-				</Text>
+				<Image className="img-fluid w-100 h-100" src={offerImage} alt="food" />
+				<Text className="mb-0">{offerName}</Text>
 			</ImageContainer>
 		</Card>
 	);
@@ -46,6 +49,7 @@ const ImageContainer = styled.div`
 
 const Image = styled.img`
 	object-fit: cover;
+	object-position: center;
 `;
 
 const Text = styled.p`
@@ -53,13 +57,19 @@ const Text = styled.p`
 	position: absolute;
 	font-weight: 500;
 	font-size: 30px;
-	line-height: 48px;
+	line-height: 40px;
 	color: #ffffff;
 	/* top: 50%; */
 	bottom: 0;
 	left: 47px;
-	width: 40%;
+	width: 42%;
 	transform: translateY(-50%);
 `;
+
+OffersCard.propTypes = {
+	offerName: PropTypes.string.isRequired,
+	offerImage: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+		.isRequired,
+};
 
 export default OffersCard;

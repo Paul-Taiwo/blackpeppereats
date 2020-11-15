@@ -5,6 +5,9 @@ import ChineseRice from "assets/images/food4.jpeg";
 import BreakFast from "assets/images/cat1.jpeg";
 import FastFood from "assets/images/cat2.jpeg";
 import Pizzas from "assets/images/cat3.jpeg";
+import Offer1 from "assets/images/offer1.jpeg";
+import Offer2 from "assets/images/offer2.jpeg";
+import Offer3 from "assets/images/offer3.jpeg";
 
 const popularFoods = [
 	{
@@ -77,4 +80,23 @@ const categories = [
 	},
 ];
 
-export { popularFoods, categories };
+const offers = [
+	{
+		name: "Get 50% off a scheduled order from Tuesday!",
+		image: Offer1,
+	},
+	{
+		name: "Get 20% off a scheduled order from Monday!",
+		image: Offer2,
+	},
+	{
+		name: "Get 60% off when you order two days before!",
+		image: Offer3,
+	},
+	{
+		name: "Get 50% off a scheduled order from Tuesday!",
+		image: Offer1,
+	},
+];
+
+export { popularFoods, categories, offers };
