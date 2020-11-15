@@ -3,10 +3,6 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-
-/**
- * Internal dependencies
- */
 import styled from "styled-components";
 
 const FoodCategoryCard = ({ categoryName, categoryImage }) => {

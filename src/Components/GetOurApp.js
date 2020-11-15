@@ -3,6 +3,10 @@
  */
 import React from "react";
 import styled from "styled-components";
+
+/**
+ * Internal dependencies
+ */
 import StoreCard from "./StoreCard";
 
 const GetOurApp = () => {

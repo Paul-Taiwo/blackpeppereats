@@ -6,10 +6,6 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 /**
- * Internal dependencies
- */
-
-/**
  *
  * @param {string} offerName
  * @param {string | number} offerImage

@@ -3,12 +3,11 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
 /**
  * Internal dependencies
  */
-// import foodImg from "assets/images/food1.jpeg";
-import styled from "styled-components";
 import currencyFormatter from "utils/currencyFormatter";
 
 /**
