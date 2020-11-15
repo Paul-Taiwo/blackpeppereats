@@ -57,8 +57,12 @@ const FoodCard = ({ foodName, foodImg, foodDescription, foodPrice }) => {
 };
 
 const Card = styled.div`
-	width: 318px;
+	width: 250px;
 	margin: 0 8px;
+
+	@media screen and (min-width: 992px) {
+		width: 318px;
+	}
 `;
 
 const ImageContainer = styled.div`

@@ -26,28 +26,26 @@ const PopularSection = ({ showTitle }) => {
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		variableWidth: true,
-		// centerMode: true,
-		// responsive: [
-		// 	{
-		// 		breakpoint: 575.98,
-		// 		settings: {
-		// 			slidesToShow: 1,
-		// 		},
-		// 	},
-		// ],
+		responsive: [
+			{
+				breakpoint: 575.98,
+				settings: {
+					slidesToShow: 1,
+				},
+			},
+		],
 	};
 
 	return (
 		<Section className={!showTitle ? "pt-0" : ""}>
 			<div className="container">
+				{showTitle && (
+					<div className="d-flex align-items-center justify-content-between w-100 mb-4">
+						<Text.Title text="What’s Popular?" />
+						<SliderNextPrevButton />
+					</div>
+				)}
 				<div className="row">
-					{showTitle && (
-						<div className="d-flex align-items-center justify-content-between w-100 mb-4">
-							<Text.Title text="What’s Popular?" />
-							<SliderNextPrevButton />
-						</div>
-					)}
-
 					{/*  eslint-disable-next-line react/jsx-props-no-spreading */}
 					<Slider {...settings}>
 						{[...popularFoods].map(({ name, description, image, price }) => (
@@ -69,6 +67,7 @@ const PopularSection = ({ showTitle }) => {
 const Section = styled.section`
 	padding-top: 66px;
 	padding-bottom: 65px;
+	overflow-x: hidden;
 `;
 
 PopularSection.defaultProps = {

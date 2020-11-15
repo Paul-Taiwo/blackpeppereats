@@ -8,7 +8,7 @@ import React from "react";
  */
 import {
 	HeroBannerSection,
-	// PopularSection,
+	PopularSection,
 	CategoriesSection,
 	// OffersSection,
 	GetOurApp,
@@ -19,11 +19,11 @@ const App = () => {
 	return (
 		<Layout>
 			<HeroBannerSection />
-			{/* <PopularSection /> */}
+			<PopularSection />
 			<CategoriesSection />
 			<GetOurApp />
 			{/* <OffersSection /> */}
-			{/* <PopularSection showTitle={false} /> */}
+			<PopularSection showTitle={false} />
 		</Layout>
 	);
 };
