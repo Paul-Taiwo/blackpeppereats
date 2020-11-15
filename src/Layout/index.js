@@ -7,11 +7,12 @@ import PropTypes from "prop-types";
 /**
  * Internal dependencies
  */
-import { Footer } from "Components";
+import { Header, Footer } from "Components";
 
 const Layout = ({ children }) => {
 	return (
 		<>
+			<Header />
 			{children}
 			<Footer />
 		</>

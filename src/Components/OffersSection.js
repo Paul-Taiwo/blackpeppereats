@@ -49,6 +49,7 @@ const OffersSection = () => {
 const Section = styled.section`
 	padding-top: 56px;
 	padding-bottom: 55px;
+	overflow-x: hidden;
 `;
 
 export default OffersSection;

@@ -16,6 +16,18 @@ const Button = ({ title, className, type = "button" }) => {
 
 const StyledButton = styled.button`
 	font-family: "Poppins", sans-serif;
+	background: #000000;
+	border-radius: 6px;
+	font-weight: 600;
+	font-size: 16px;
+	/* line-height: 24px; */
+	padding: 10px 20px;
+	color: #fff;
+
+	&:focus,
+	&:hover {
+		color: #fff;
+	}
 `;
 
 Button.defaultProps = {

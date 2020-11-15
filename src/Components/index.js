@@ -4,6 +4,7 @@ import FoodCard from "./FoodCard";
 import FoodCategoryCard from "./FoodCategoryCard";
 import Footer from "./Footer";
 import GetOurApp from "./GetOurApp";
+import Header from "./Header";
 import HeroBannerSection from "./HeroBannerSection";
 import OffersSection from "./OffersSection";
 import PopularSection from "./PopularSection";
@@ -17,6 +18,7 @@ export {
 	FoodCategoryCard,
 	Footer,
 	GetOurApp,
+	Header,
 	HeroBannerSection,
 	OffersSection,
 	PopularSection,
