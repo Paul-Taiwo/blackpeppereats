@@ -8,6 +8,8 @@ import Header from "./Header";
 import HeroBannerSection from "./HeroBannerSection";
 import OffersSection from "./OffersSection";
 import PopularSection from "./PopularSection";
+import SelectFoodControlComponent from "./SelectFoodControlComponent";
+import SelectTimeControlComponent from "./SelectTimeControlComponent";
 import SliderNextPrevButton from "./SliderNextPrevButton";
 import Text from "./Text";
 
@@ -22,6 +24,8 @@ export {
 	HeroBannerSection,
 	OffersSection,
 	PopularSection,
+	SelectFoodControlComponent,
+	SelectTimeControlComponent,
 	SliderNextPrevButton,
 	Text,
 };
