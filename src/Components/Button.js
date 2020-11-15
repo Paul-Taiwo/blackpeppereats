@@ -3,19 +3,20 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-
-/**
- * Internal dependencies
- */
+import styled from "styled-components";
 
 const Button = ({ title, className, type = "button" }) => {
 	return (
 		// eslint-disable-next-line react/button-has-type
-		<button type={type || "button"} className={className}>
+		<StyledButton type={type || "button"} className={className}>
 			{title}
-		</button>
+		</StyledButton>
 	);
 };
+
+const StyledButton = styled.button`
+	font-family: "Poppins", sans-serif;
+`;
 
 Button.defaultProps = {
 	className: "btn",

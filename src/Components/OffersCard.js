@@ -49,6 +49,7 @@ const Image = styled.img`
 `;
 
 const Text = styled.p`
+	font-family: "Poppins", sans-serif;
 	position: absolute;
 	font-weight: 500;
 	font-size: 30px;

@@ -41,6 +41,7 @@ const Bell = styled.div`
 `;
 
 const Text = styled.p`
+	font-family: "Poppins", sans-serif;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 38px;

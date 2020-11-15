@@ -38,12 +38,14 @@ const Card = styled.div`
 `;
 
 const CardTitle = styled.p`
+	font-family: "Poppins", sans-serif;
 	font-size: 12px;
 	line-height: 108.3%;
 	color: ${(props) => (props.dark ? "#F2F2F2" : "#000000")};
 `;
 
 const StoreName = styled.p`
+	font-family: "Poppins", sans-serif;
 	font-weight: 500;
 	font-size: 24px;
 	line-height: 108.3%;

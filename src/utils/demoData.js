@@ -2,6 +2,9 @@ import Jollof from "assets/images/food1.jpeg";
 import JollofChicken from "assets/images/food2.jpeg";
 import Spaghetti from "assets/images/food3.jpeg";
 import ChineseRice from "assets/images/food4.jpeg";
+import BreakFast from "assets/images/cat1.jpeg";
+import FastFood from "assets/images/cat2.jpeg";
+import Pizzas from "assets/images/cat3.jpeg";
 
 const popularFoods = [
 	{
@@ -55,4 +58,23 @@ const popularFoods = [
 	},
 ];
 
-export { popularFoods };
+const categories = [
+	{
+		name: "Breakfast Foods",
+		image: BreakFast,
+	},
+	{
+		name: "Fast Foods",
+		image: FastFood,
+	},
+	{
+		name: "Pizzas",
+		image: Pizzas,
+	},
+	{
+		name: "Beef Soups",
+		image: Jollof,
+	},
+];
+
+export { popularFoods, categories };

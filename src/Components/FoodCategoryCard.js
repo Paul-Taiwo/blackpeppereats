@@ -2,20 +2,24 @@
  * External dependencies
  */
 import React from "react";
+import PropTypes from "prop-types";
 
 /**
  * Internal dependencies
  */
-import foodImg from "assets/images/food1.jpeg";
 import styled from "styled-components";
 
-const FoodCategoryCard = () => {
+const FoodCategoryCard = ({ categoryName, categoryImage }) => {
 	return (
 		<Card>
 			<ImageContainer>
 				<Overlay />
-				<Image className="img-fluid w-100 h-100" src={foodImg} alt="food" />
-				<Text>Title text middle</Text>
+				<Image
+					className="img-fluid w-100 h-100"
+					src={categoryImage}
+					alt="food"
+				/>
+				<Text>{categoryName}</Text>
 			</ImageContainer>
 		</Card>
 	);
@@ -50,7 +54,9 @@ const Image = styled.img`
 `;
 
 const Text = styled.p`
+	font-family: "Poppins", sans-serif;
 	position: absolute;
+	text-align: center;
 	font-weight: 500;
 	font-size: 30px;
 	line-height: 48px;
@@ -60,5 +66,11 @@ const Text = styled.p`
 	width: 90%;
 	transform: translate(-50%, -50%);
 `;
+
+FoodCategoryCard.propTypes = {
+	categoryName: PropTypes.string.isRequired,
+	categoryImage: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+		.isRequired,
+};
 
 export default FoodCategoryCard;

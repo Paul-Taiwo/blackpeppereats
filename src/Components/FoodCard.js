@@ -11,6 +11,14 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import currencyFormatter from "utils/currencyFormatter";
 
+/**
+ *
+ * @param {string} foodName
+ * @param {string | number} foodImg
+ * @param {string} foodDescription
+ * @param {number} foodPrice
+ */
+
 const FoodCard = ({ foodName, foodImg, foodDescription, foodPrice }) => {
 	return (
 		<Card>

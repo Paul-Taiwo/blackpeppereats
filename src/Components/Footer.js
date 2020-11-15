@@ -121,7 +121,6 @@ const Footer = () => {
 };
 
 const Footeer = styled.footer`
-	font-family: "Poppins", sans-serif;
 	padding-top: 54px;
 	padding-bottom: 76px;
 	background: linear-gradient(rgba(67, 67, 67, 0.4), rgba(67, 67, 67, 0.4)),
@@ -136,6 +135,7 @@ const FooterSec = styled.div`
 `;
 
 const FooterTitle = styled.h2`
+	font-family: "Poppins", sans-serif;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 32px;

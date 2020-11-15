@@ -3,6 +3,7 @@
  */
 import React from "react";
 import styled from "styled-components";
+import { categories } from "utils/demoData";
 
 /**
  * Internal dependencies
@@ -24,18 +25,11 @@ const CategoriesSection = () => {
 				</div>
 
 				<div className="row">
-					<div className="col-12 col-lg-3 px-0">
-						<FoodCategoryCard />
-					</div>
-					<div className="col-12 col-lg-3 px-0">
-						<FoodCategoryCard />
-					</div>
-					<div className="col-12 col-lg-3 px-0">
-						<FoodCategoryCard />
-					</div>
-					<div className="col-12 col-lg-3 px-0">
-						<FoodCategoryCard />
-					</div>
+					{[...categories].map(({ name, image }) => (
+						<div className="col-12 col-lg-3 px-0">
+							<FoodCategoryCard categoryName={name} categoryImage={image} />
+						</div>
+					))}
 				</div>
 			</div>
 		</Section>
