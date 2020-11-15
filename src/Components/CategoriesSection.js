@@ -16,18 +16,15 @@ const CategoriesSection = () => {
 	return (
 		<Section>
 			<div className="container">
-				<div className="row">
-					<div className="d-flex align-items-center justify-content-between w-100 mb-4">
-						<Text.Title text="Our Categories" />
+				<div className="d-flex align-items-center justify-content-between w-100 mb-4">
+					<Text.Title text="Our Categories" />
 
-						<SeeAllButton type="button" className="btn" title="See all" />
-					</div>
+					<SeeAllButton type="button" className="btn" title="See all" />
 				</div>
 
 				<div className="row">
 					{[...categories].map(({ name, image }) => (
-						<div className="col-12 col-lg-3 px-0">
-							s
+						<div className="col-12 col-md-6 col-lg-3 px-0 mb-3 mb-lg-0">
 							<FoodCategoryCard
 								key={name}
 								categoryName={name}

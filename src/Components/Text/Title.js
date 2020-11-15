@@ -19,9 +19,13 @@ const Title = ({ text }) => {
 const Text = styled.h1`
 	font-family: "Poppins", sans-serif;
 	font-weight: 500;
-	font-size: 38px;
-	line-height: 72px;
+	font-size: 26px;
 	color: #000000;
+
+	@media screen and (min-width: 500px) {
+		font-size: 38px;
+		line-height: 72px;
+	}
 `;
 
 Title.propTypes = {

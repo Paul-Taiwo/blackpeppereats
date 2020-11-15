@@ -27,6 +27,14 @@ const PopularSection = ({ showTitle }) => {
 		slidesToScroll: 1,
 		variableWidth: true,
 		// centerMode: true,
+		// responsive: [
+		// 	{
+		// 		breakpoint: 575.98,
+		// 		settings: {
+		// 			slidesToShow: 1,
+		// 		},
+		// 	},
+		// ],
 	};
 
 	return (

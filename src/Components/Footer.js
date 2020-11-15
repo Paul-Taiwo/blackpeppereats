@@ -13,23 +13,22 @@ import StoreCard from "./StoreCard";
 const Footer = () => {
 	return (
 		<Footeer className="position-relative">
-			{/* <Overlay /> */}
 			<div className="container">
-				<div className="d-flex justify-content-between">
-					<FooterTitle>Blackpeppereats</FooterTitle>
-					<div className="d-flex">
-						<StoreCard store="appstore" className="mr-3" />
-						<StoreCard />
+				<div className="d-flex flex-column flex-lg-row justify-content-between">
+					<FooterTitle className="mb-4">Blackpeppereats</FooterTitle>
+					<div className="d-flex flex-column flex-lg-row align-items-center">
+						<StoreCard store="appstore" className="mb-3 mb-lg-0 mr-lg-3" />
+						<StoreCard className="" />
 					</div>
 				</div>
 
-				<FooterSec className="d-flex justify-content-between">
-					<p className="text-white">© 2020 Blackpepper</p>
+				<FooterSec className="d-flex flex-column flex-md-row align-items-center justify-content-between">
+					<p className="text-white mb-0">© 2020 Blackpepper</p>
 
 					<div className="d-flex">
-						<p className="text-white mx-3">Legal</p>
-						<p className="text-white mx-3">Legal</p>
-						<p className="text-white mx-3">Legal</p>
+						<p className="text-white mx-3 mb-lg-0">Legal</p>
+						<p className="text-white mx-3 mb-lg-0">Legal</p>
+						<p className="text-white mx-3 mb-lg-0">Legal</p>
 					</div>
 
 					<div className="d-flex">
@@ -125,7 +124,6 @@ const Footeer = styled.footer`
 	padding-bottom: 76px;
 	background: linear-gradient(rgba(67, 67, 67, 0.4), rgba(67, 67, 67, 0.4)),
 		url(${bgImage});
-	background-repeat: no-repeat;
 	background-color: #000000;
 	margin-top: 40px;
 `;
