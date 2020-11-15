@@ -19,7 +19,7 @@ const Title = ({ text }) => {
 const Text = styled.h1`
 	font-family: "Poppins", sans-serif;
 	font-weight: 500;
-	font-size: 48px;
+	font-size: 38px;
 	line-height: 72px;
 	color: #000000;
 `;
