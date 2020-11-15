@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
 import PropTypes from "prop-types";
@@ -19,9 +19,11 @@ import SliderNextPrevButton from "./SliderNextPrevButton";
  */
 
 const PopularSection = ({ showTitle }) => {
+	const ref = useRef();
+
 	const settings = {
 		dots: false,
-		infinite: false,
+		infinite: true,
 		speed: 300,
 		slidesToShow: 4,
 		slidesToScroll: 1,
@@ -42,12 +44,17 @@ const PopularSection = ({ showTitle }) => {
 				{showTitle && (
 					<div className="d-flex align-items-center justify-content-between w-100 mb-4">
 						<Text.Title text="What’s Popular?" />
-						<SliderNextPrevButton />
+						<SliderNextPrevButton sliderRef={ref} />
 					</div>
 				)}
 				<div className="row">
-					{/*  eslint-disable-next-line react/jsx-props-no-spreading */}
-					<Slider {...settings}>
+					<Slider
+						ref={(c) => {
+							ref.current = c;
+						}}
+						//  eslint-disable-next-line react/jsx-props-no-spreading
+						{...settings}
+					>
 						{[...popularFoods].map(({ name, description, image, price }) => (
 							<FoodCard
 								key={name}
@@ -65,8 +72,8 @@ const PopularSection = ({ showTitle }) => {
 };
 
 const Section = styled.section`
-	padding-top: 66px;
-	padding-bottom: 65px;
+	padding-top: 56px;
+	padding-bottom: 55px;
 	overflow-x: hidden;
 `;
 

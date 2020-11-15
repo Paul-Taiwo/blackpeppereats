@@ -24,7 +24,23 @@ const OffersCard = ({ offerName, offerImage }) => {
 
 const Card = styled.div`
 	margin: 0 10px;
-	width: 900px;
+	width: 250px;
+
+	@media screen and (min-width: 425px) {
+		width: 300px;
+	}
+
+	@media screen and (min-width: 768px) {
+		width: 640px;
+	}
+
+	@media screen and (min-width: 992px) {
+		width: 800px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: 1100px;
+	}
 `;
 
 const Overlay = styled.div`
@@ -37,10 +53,15 @@ const Overlay = styled.div`
 `;
 
 const ImageContainer = styled.div`
-	height: 336px;
-	border-radius: 30px;
+	height: 162px;
+	border-radius: 20px;
 	overflow: hidden;
 	position: relative;
+
+	@media screen and (min-width: 768px) {
+		height: 336px;
+		border-radius: 30px;
+	}
 `;
 
 const Image = styled.img`
@@ -52,14 +73,33 @@ const Text = styled.p`
 	font-family: "Poppins", sans-serif;
 	position: absolute;
 	font-weight: 500;
-	font-size: 30px;
-	line-height: 40px;
+	font-size: 16px;
 	color: #ffffff;
 	/* top: 50%; */
 	bottom: 0;
-	left: 47px;
-	width: 42%;
+	left: 26px;
 	transform: translateY(-50%);
+
+	@media screen and (min-width: 768px) {
+		width: 64%;
+		font-size: 24px;
+		left: 36px;
+		line-height: 36px;
+	}
+
+	@media screen and (min-width: 992px) {
+		width: 50%;
+		font-size: 26px;
+		left: 35px;
+		line-height: 38px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: 42%;
+		font-size: 30px;
+		left: 47px;
+		line-height: 40px;
+	}
 `;
 
 OffersCard.propTypes = {

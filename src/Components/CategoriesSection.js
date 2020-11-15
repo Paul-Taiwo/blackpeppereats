@@ -39,8 +39,8 @@ const CategoriesSection = () => {
 };
 
 const Section = styled.section`
-	padding-top: 66px;
-	padding-bottom: 65px;
+	padding-top: 56px;
+	padding-bottom: 55px;
 `;
 
 const SeeAllButton = styled(Button)`

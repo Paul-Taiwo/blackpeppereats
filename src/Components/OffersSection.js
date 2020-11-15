@@ -21,15 +21,14 @@ const OffersSection = () => {
 		slidesToScroll: 1,
 		variableWidth: true,
 		centerMode: true,
+		autoplay: true,
 	};
 
 	return (
 		<Section>
 			<div className="container">
-				<div className="row">
-					<div className="d-flex align-items-center justify-content-between w-100 mb-4">
-						<Text.Title text="Offers" />
-					</div>
+				<div className="d-flex align-items-center justify-content-between w-100 mb-4">
+					<Text.Title text="Offers" />
 				</div>
 			</div>
 
@@ -48,8 +47,8 @@ const OffersSection = () => {
 };
 
 const Section = styled.section`
-	padding-top: 66px;
-	padding-bottom: 65px;
+	padding-top: 56px;
+	padding-bottom: 55px;
 `;
 
 export default OffersSection;

@@ -3,14 +3,15 @@
  */
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
-const SliderNextPrevButton = () => {
+const SliderNextPrevButton = ({ sliderRef }) => {
 	return (
 		<div className="d-flex justify-content-center position-relative">
 			<Button
 				type="button"
 				className="btn mr-3 d-flex align-items-center justify-content-center"
-				// onClick={() => sliderRef.current.slickPrev()}
+				onClick={() => sliderRef.current.slickPrev()}
 			>
 				<div className="mt-n1">
 					<svg
@@ -34,7 +35,7 @@ const SliderNextPrevButton = () => {
 			<Button
 				type="button"
 				className="btn"
-				// onClick={() => sliderRef.current.slickNext()}
+				onClick={() => sliderRef.current.slickNext()}
 			>
 				<div className="mt-n1">
 					<svg
@@ -64,5 +65,13 @@ const Button = styled.button`
 	height: 50px;
 	width: 50px;
 `;
+
+SliderNextPrevButton.propTypes = {
+	sliderRef: PropTypes.shape({
+		current: {
+			slickNext: PropTypes.func.isRequired,
+		},
+	}).isRequired,
+};
 
 export default SliderNextPrevButton;
