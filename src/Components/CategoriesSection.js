@@ -44,7 +44,11 @@ const Section = styled.section`
 `;
 
 const SeeAllButton = styled(Button)`
-	font-size: 22px;
+	font-size: 16px;
+
+	@media screen and (min-width: 768px) {
+		font-size: 22px;
+	}
 `;
 
 export default CategoriesSection;
