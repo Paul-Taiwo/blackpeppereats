@@ -6,6 +6,8 @@ import Footer from "./Footer";
 import GetOurApp from "./GetOurApp";
 import Header from "./Header";
 import HeroBannerSection from "./HeroBannerSection";
+import Modal from "./Modal";
+import ModalPortal from "./ModalPortal";
 import OffersSection from "./OffersSection";
 import PopularSection from "./PopularSection";
 import SelectFoodControlComponent from "./SelectFoodControlComponent";
@@ -22,6 +24,8 @@ export {
 	GetOurApp,
 	Header,
 	HeroBannerSection,
+	Modal,
+	ModalPortal,
 	OffersSection,
 	PopularSection,
 	SelectFoodControlComponent,

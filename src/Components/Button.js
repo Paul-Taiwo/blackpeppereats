@@ -5,10 +5,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const Button = ({ title, className, type = "button" }) => {
+const Button = ({ title, className, type = "button", onClick }) => {
 	return (
 		// eslint-disable-next-line react/button-has-type
-		<StyledButton type={type || "button"} className={className}>
+		<StyledButton
+			type={type || "button"}
+			onClick={onClick}
+			className={className}
+		>
 			{title}
 		</StyledButton>
 	);
@@ -32,11 +36,13 @@ const StyledButton = styled.button`
 
 Button.defaultProps = {
 	className: "btn",
+	onClick: () => null,
 };
 
 Button.propTypes = {
 	title: PropTypes.string.isRequired,
 	className: PropTypes.string,
+	onClick: PropTypes.func,
 	type: PropTypes.string.isRequired,
 };
 

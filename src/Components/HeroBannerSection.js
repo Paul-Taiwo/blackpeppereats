@@ -12,11 +12,16 @@ import bgImage from "assets/images/heroBg.jpeg";
 import SelectFoodControlComponent from "./SelectFoodControlComponent";
 import SelectTimeControlComponent from "./SelectTimeControlComponent";
 import Button from "./Button";
+import Modal from "./Modal";
+import ModalPortal from "./ModalPortal";
 
 /**
  * Options for Select
  */
 const options = [
+	{ value: "spagChick", label: "Spaghetti & Barbecue chicken" },
+	{ value: "jollofBeef", label: "Jollof Rice & Beef" },
+	{ value: "chinkoRiceBeef", label: "Chinese Rice & Beef" },
 	{ value: "chocolate", label: "Chocolate" },
 	{ value: "strawberry", label: "Strawberry" },
 	{ value: "vanilla", label: "Vanilla" },
@@ -59,6 +64,7 @@ const customStyle = {
 };
 
 const HeroBannerSection = () => {
+	const [showModal, setShowModal] = useState(false);
 	const [selectedOption, setSelectedOption] = useState(null);
 	const [deliverWhen, setDeliverWhen] = useState(deliverWhenOptions[0]);
 
@@ -70,8 +76,15 @@ const HeroBannerSection = () => {
 		setDeliverWhen(selected);
 	};
 
+	const showModalHandler = () => setShowModal(true);
+	const hideModalHandler = () => setShowModal(false);
+
 	return (
 		<Section>
+			<ModalPortal>
+				<Modal isActive={showModal} closeHandler={hideModalHandler} />
+			</ModalPortal>
+
 			<SectionText className="position-absolute">
 				<SectionTitle className="mb-4">What are you eating Today?</SectionTitle>
 
@@ -83,7 +96,7 @@ const HeroBannerSection = () => {
 						value={selectedOption}
 						onChange={handleChange}
 						options={options}
-						placeholder="Select Closest BlackBells to you"
+						placeholder="Select out of our delicious delicacy"
 					/>
 
 					<SelectTimeControl
@@ -95,7 +108,7 @@ const HeroBannerSection = () => {
 						options={deliverWhenOptions}
 						placeholder="Select Closest BlackBells to you"
 					/>
-					<Button title="Get Food" />
+					<Button title="Get Food" onClick={showModalHandler} />
 				</div>
 
 				<SubText className="">Sign up for extra features</SubText>
